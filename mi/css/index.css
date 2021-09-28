@@ -1,0 +1,566 @@
+/* 这是首页的样式表 */
+/* 导航条的样式 */
+div.daoouter{
+    background: #333;
+    height: 40px;
+}
+div.dao{
+    line-height: 40px;
+    
+}
+div.left{
+    float: left;
+}
+li.leftword{
+    float: left;
+    position: relative;
+    
+}
+li.daolineleft{
+    float: left;
+    margin: 15px 8px 0 8px;
+    width: 1px;
+    height:13px;
+    background-color: #424242;
+}
+.twocode{
+    width: 124px;
+    
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    top:40px;
+    right:-48px;
+    text-align: center;
+    /* display: none;   当你使用了动画效果变高度后就不要设置displaynone了*/   
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.3s;
+    z-index: 999;
+}
+.twoimage{
+    width: 90px;
+    margin: 17px 0 0px 0;
+}
+.span{
+     margin-top:-13px; /*这里设置的这么夸张是因为他继承了父类的line-height */
+    font-size: 15px;
+    color: black;
+}
+.two:hover .twocode{
+    /* display: block; */
+    height: 148px;
+}
+.two:hover a{
+    color:#fff
+}
+.two:hover::after{
+    content: "";
+    width: 0px;
+    height: 0px;
+    border: 7px solid transparent;
+    border-bottom-color:#fff;
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    right: 0px;
+    margin: 0 auto;
+}
+/* .twocode:hover{
+    display: block;   应该是没必要的了，因为是子元素
+} */
+div.selectcar{
+    float: right;
+    
+    margin-left: 20px;
+    position: relative;
+    z-index: 999;
+    
+}
+.fa-shopping-cart{
+    margin-right: 3px;
+}
+div.muhuying{
+    position:relative;
+    background-color: #424242;
+    z-index: 999;
+    padding:0 16px 0 16px;
+    
+}
+.carthing{
+    width: 360px;
+    height: 0px;
+    overflow: hidden;
+    background-color: #fff;
+    position:absolute;
+    right:0px;
+    top:40px;
+    
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    
+    z-index: 1;
+    transition: height 0.3s;
+}
+div.selectcar:hover .carthing{
+    height: 100px;
+}
+div.muhuying:hover{   /* 只有这样才是同级元素去盖它 */
+    background-color: #fff;
+   
+}
+div.selectcar:hover a{
+    color:#ff6700;
+}
+
+.carthing:hover{
+    display: block;
+}
+li.rightword{
+    float:right;
+}
+li.daolineright{
+    float:right;
+    margin: 15px 8px 0 8px;
+    width: 1px;
+    height: 10px;
+    background-color: #424242;
+}
+a.daoleftword:hover,a.daorightword:hover{
+    color:#fff
+}
+
+
+/* Logo行的样式 */
+div.logooutout{
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    margin-top: 22px;
+}
+div.logoouter{
+    
+    background-color: #fff;
+    line-height: 55px;
+    padding-bottom: 23px;
+   
+}
+div.logo{
+    position: relative;
+    overflow: hidden;
+    width: 55px;    /* 很有必要 */
+    height: 55px; /* 很有必要 */
+    float: left;  /* 很有必要 */
+}
+/* 设置logo */
+a.logo-mi{
+    width: 55px;
+    height: 55px;
+    position: absolute;     /* 不然会影响布局 */
+    background-color: #ff6700;
+    background-image: url(../img/mi-logo.png);
+    left:0;
+    background-position: center;
+    transition: left 0.3s;
+}
+a.logo-home{
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    background-color: #ff6700;
+    background-image: url(../img/mi-home.png);
+    left:-55px;
+    background-position: center;
+    transition: left 0.3s;
+}
+/* 设置logo的变换 */
+div.logo:hover a.logo-mi{
+    left:55px;
+}
+div.logo:hover a.logo-home{
+    left: 0px;
+}
+
+div.list2{
+    float: right;
+}
+li.list2-ul-list{
+    float: right;
+    padding: 3px 10px 21px;
+}
+/* 隐藏全部商品分类 */
+a.hidden{
+    visibility:hidden;  /*老师是floatright所以要用visibility才不会占位置*/
+}
+a.list2-a{
+    color:#333;
+    font-size: 16px;
+}
+/* 设置手机展示浮动面板 */
+div.floatspan{
+    background-color:#fff;
+    box-shadow: 0 2px 3px rgba(0,0,0,.3);
+    height: 0;
+    overflow: hidden;
+    transition: border-top 0.3s;
+    transition: height 0.3s;
+    position: absolute;
+    border-top: 0px solid transparent;
+    left:0;
+    width: 100%;
+    top:77px;
+    z-index: 9999;
+}
+li.float-li{
+    float: left;
+    text-align: center;
+}
+li.floatline{
+    float: left;
+    width: 1px;
+    height: 100px;
+    background-color: #ccc;
+    margin-top: 35px;
+}
+img.floatspan-img{
+    width: 160px;
+    height: 110px;
+    padding:35px 21.5px 0 21.5px;
+}
+div.pname{
+    width:180ox;
+    height: 20px;
+    color: #333;
+    font-size: 12px;
+    margin-top: -20px;   /* 设置line-height */
+}
+div.pprice{
+    width: 180px;
+    height: 20px;
+    color: #ff6700;
+    font-size: 12px;
+    padding-left: 12px;
+    
+}
+.list2-ul-list:not(:last-of-type):hover a{
+    color: #ff6700;
+}
+
+/* 浮动面板的显示 */
+.show:hover~.floatspan,
+.floatspan:hover{
+    height: 229px;
+    border-top: 1px solid #ccc;
+}
+
+/* 设置搜索部分 */
+div.searchout{
+    float: right;
+    margin-left: 85px;
+    position: relative;
+    padding: 3px 0 0;
+
+}
+.searchtext{
+    box-sizing: border-box;
+    float: left;
+    line-height: 49px;
+    width:244px;
+    padding: 0;
+    outline: none;
+    border: 1px solid #ccc;
+}
+.searchbutton{
+    float: left;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-left:none;
+    width: 52px;
+    line-height: 49px;
+    background-color: #fff;
+    color:#616161;
+    font-size: 17px;
+    transition: background-color  0.3s;
+    transition: color  0.2s;
+}
+/* 搜索记录浮动板 */
+.searchfloatspan{
+    width: 242px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #ff6700;
+    position: absolute;
+    top:53px;
+    left: 0;
+    display:none;
+}
+.searchtext:focus,
+.searchtext:focus~.searchbutton{
+    border-color: #ff6700;
+}
+.searchtext:focus~.searchfloatspan{
+    display: block;
+}
+/* 浮动板里面的内容 */
+
+.searchlist{
+    line-height: 25px;
+    color: #333;
+    font-size: 10px;
+    padding-left: 10px;
+    
+}
+.searchlist:hover{
+    background-color: rgb(245, 243, 243);
+}
+.searchbutton:hover{
+    background-color: #ff6700;
+    color: #fff;
+}
+
+/* all商品的列表 */
+
+/* 父类li */
+li.all{
+    position: relative;
+}
+
+div.floatalllist{
+    position: absolute;
+    top:77px;
+    width:234px;
+    height:420px;
+    padding:20px 0px;
+    background-color: rgba(0,0,0,.3);
+    left:-118px;
+    z-index: 9;
+    color: #fff;
+}
+li.alllist-li{
+   line-height: 43px;
+   
+    width:184px;
+    
+    
+}
+a.alllist-:hover{
+    background-color: #ccc;
+    color:#fff;
+}
+a.alllist-,div.floatalllist:hover a{
+    color:#fff;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 43px;
+    padding-left: 30px;
+    padding-right: 20px;
+    width:184px;
+    
+}
+i.fa-angle-right{
+    float: right;
+    padding-top:13px ;
+    font-size: 18px;
+}
+
+/* all旁边的banner */
+div.banner{
+    position: absolute;
+    z-index: 99;
+    width:700px;
+    height: 460px;
+    top:0px;
+    left:234px;
+    background-color: #fff;
+    
+    display: none;
+    
+}
+li.alllist-li:hover~div.banner,
+div.banner:hover{  /*虽然是a才是真正但是无所谓Li也可以用 */
+    display: block;
+}
+
+/* all的背景 */
+div.middleback{
+    
+    width:1226px;
+    height: 460px;
+    position: relative;
+    z-index: 1;
+}
+a.middleimg{
+    position: absolute;
+    /* left:0;
+    right: 0; */
+    
+    
+    
+}
+img.middlebackimg{
+    width:1226px;
+    height: 460px;
+    
+}
+div.pointer{
+    position: absolute;
+    z-index: 3;
+    bottom:30px;
+    right:30px;
+    
+}
+li.po{
+    width: 6px;
+    height:6px;
+    float: left;
+    border: 2px solid #fff;
+    border-color: hsla(0,0%,100%,.3);
+    border-radius: 50%;
+    background-color:rgba(0,0,0,.4);
+    margin-left: 6px;
+}
+li.po:hover{
+    background-color: #fff;
+    border-color: rgba(0,0,0,.4)
+}
+
+div.leftarrow{
+    position: absolute;
+    background-image:url(../img/icon-slides.png);
+    
+    z-index:3;
+    height:69px;
+    width:41px;
+    overflow: hidden;
+    background-position-x:83px ;
+    top:210px;
+    left:234px;
+}
+div.leftarrow:hover{
+    background-position: 0px;
+}
+div.rightarrow{
+    position: absolute;
+    background-image:url(../img/icon-slides.png);
+    z-index:1;
+    height:69px;
+    width:41px;
+    overflow: hidden;
+    background-position-x:42px ;
+    top:210px;
+    right:0px;
+}
+div.rightarrow:hover{
+    background-position: 123px;
+}
+
+
+/* 四个框的样式表 */
+div.sixfunction{
+    float: left;
+    background-color: #5f5750;
+    height: 164px;
+    width: 230px;
+    margin-top: 16px;
+    padding: 3px;
+}
+.iconspan{
+    width:70px;
+    height: 82px;
+    padding: 3px;
+    text-align: center;
+    position: relative;
+}
+.iconspan::before{
+    content: "";
+    width:60px;
+    height: 1px;
+    background-color: rgb(97, 95, 95);
+    position: absolute;
+    top:0px;
+    right:0px;
+    left:0px;
+    margin: 0 auto;
+
+}
+.iconspan::after{
+    content: "";
+    width:1px;
+    height: 70px;
+    background-color: rgb(97, 95, 95);
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    margin: auto 0;
+
+}
+.icona:hover{
+    color:#fff;
+}
+.icon{
+    height: 24px;
+    width:24px;
+    margin: 18px 20px 0;
+}
+div.secondcontent{
+    float: left;
+    height:170px;
+    width:316px;
+    margin-left: 14px;
+    margin-top: 16px;
+}
+img.secondco{
+    height: 170px;
+    width:316px;
+}
+
+
+/* 展脂条的样式表 */
+div.fix{
+    height: 318px;
+    width:64px;
+    background-color: #fff;
+    position:fixed;
+    right:50%;
+    bottom:60px;
+    margin-right: -680px;
+    border: 1px solid  #f5f5f5;
+    border-top:none;
+    z-index: 7;
+}
+.fixlistli{
+    text-align: center;
+    border-top: 1px solid  #f5f5f5;
+}
+.fixa{
+    display: block;
+    
+    margin: 10px auto;
+    text-align: center;
+}
+.fixi{
+    height: 30px;
+    width:30px;
+    margin: 18px 17px 0 ;
+}
+div.fixhover{
+    position: absolute;
+    left:-100px;
+    top:0px;
+    height: 130px;
+    width:90px;
+    background-color: #fff;
+    display: none;
+}
+.fixtwocode{
+    width:70px;
+    margin: 10px auto 3px;
+}
+.fixcodetext{
+    width: 60px;
+    margin: 0 auto;
+}
+
+.hoverfix:hover .fixhover{
+    display: block;
+}

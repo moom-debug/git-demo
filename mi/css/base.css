@@ -1,0 +1,29 @@
+/* 公用样式表 */
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body{
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color:#b0b0b0;
+    /* 设置最小宽度 */
+    min-width: 1226px;
+    height: 2000px;
+}
+
+/* 设置中部容器的宽度 */
+.w{
+    width:1226px;
+    margin: 0 auto;
+}
+
+/* 所有超链接的格式 */
+a{
+    text-decoration: none;
+    font: 7px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color:#b0b0b0;
+}
+
